@@ -373,10 +373,10 @@ button:disabled {
 
 <body>
 <?Php
-        $servername = "sql6.freesqldatabase.com";
-        $username   = "sql6510577";
-        $password   = "nvw53epmSJ";
-        $dbname     = "sql6510577";
+        $servername = "db4free.net";
+        $username   = "tejasdb_more";
+        $password   = "tejasvmore";
+        $dbname     = "tejasdb_more";
     
     $conn =  mysqli_connect($servername,$username,$password,$dbname);
 
