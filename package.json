@@ -1,0 +1,20 @@
+{
+    "name": "instagram.github.io",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "build": "echo \"No build specified\" && exit 1",
+        "test": "echo \"No test specified\" && exit 1",
+        "start": "node index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DeRiO0/instagram.github.io.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/DeRiO0/instagram.github.io/issues"
+    },
+    "homepage": "https://github.com/DeRiO0/instagram.github.io#readme"
+}
